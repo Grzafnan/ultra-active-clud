@@ -1,11 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
 import './Sidecontainer.css';
 import image from '../../image/my-image.jpg';
 const Sidecontainer = ({ times }) => {
 
-  const breakTime = ['10', '20', '30', '40', '50']
+  const breakTimes = [10, 20, 30, 40, 50]
+
+  const [breaks, setBreaks] = useState(0)
+
+  const getBreaktime = (time) => {
+    setBreaks(time);
+    localStorage.setItem('Breaks', time);
+  }
+
+  useState(() => {
+    const previousBreaks = localStorage.getItem('Breaks')
+
+    if (previousBreaks) {
+      setBreaks(previousBreaks)
+    }
+  }, [])
+
 
 
   return (
@@ -37,11 +53,19 @@ const Sidecontainer = ({ times }) => {
 
       <h2 className='my-10 text-3xl font-semibold'>Add A Break</h2>
       <div className='bg-[#F2F4FA] flex justify-around gap-1 px-2 py-4 rounded-md'>
-        <button className='btn btn-outline btn-primary  w-12 h-10 rounded-full'>10S</button>
+
+        {
+          breakTimes.map(breakTime => (
+            <button onClick={() => getBreaktime(breakTime)} className='btn btn-outline btn-primary  w-12 h-10 rounded-full'>{breakTime}S</button>
+          ))
+        }
+
+
+        {/* <button className='btn btn-outline btn-primary  w-12 h-10 rounded-full'>10S</button>
         <button className='btn btn-outline btn-primary  w-12 h-10 rounded-full'>20S</button>
         <button className='btn btn-outline btn-primary  w-12 h-10 rounded-full'>30S</button>
         <button className='btn btn-outline btn-primary  w-12 h-10 rounded-full'>40S</button>
-        <button className='btn btn-outline btn-primary  w-12 h-10 rounded-full'>50S</button>
+        <button className='btn btn-outline btn-primary  w-12 h-10 rounded-full'>50S</button> */}
       </div>
 
       <h2 className='my-10 text-3xl font-semibold'>Exercise Details</h2>
@@ -51,7 +75,7 @@ const Sidecontainer = ({ times }) => {
       </div>
       <div className='flex justify-between items-center bg-[#F2F4FA]   p-6 rounded-md mt-5 mb-10'>
         <h2 className='text-xl font-semibold'>Break time </h2>
-        <p className='text-lg'><span>0</span> seconds</p>
+        <p className='text-lg'><span>{breaks}</span> seconds</p>
       </div>
       <button className='btn btn-primary w-full capitalize text-xl'>Activity Completed</button>
     </div>
