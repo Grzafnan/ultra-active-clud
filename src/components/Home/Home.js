@@ -6,6 +6,23 @@ const Home = () => {
 
   const [worksout, setWorksout] = useState([]);
 
+  const [times, setTimes] = useState(0);
+
+  const handleTimes = (time) => {
+    const newTime = parseFloat(times) + parseFloat(time);
+    setTimes(newTime)
+
+    localStorage.setItem('Exercise', newTime)
+  }
+
+
+  useEffect(() => {
+    const storedTime = localStorage.getItem('Exercise');
+    if (storedTime) {
+      setTimes(storedTime)
+    }
+  }, [])
+
   useEffect(() => {
     fetch('routine.json')
       .then(res => res.json())
@@ -25,15 +42,15 @@ const Home = () => {
         </div>
       </div>
 
-      <div className='workout-container mb-10'>
-        <div className=' bg-[#F2F4FA] grid md:grid-cols-2 lg:grid-cols-3 gap-10 px-10 lg:px-14 py-2'>
+      <div className='workout-container grid md:grid-cols-12 mb-10'>
+        <div className=' col-span-8 bg-[#F2F4FA] grid md:grid-cols-2 lg:grid-cols-3 gap-10 px-10 lg:px-14 py-2'>
           {
-            worksout.map(workout => <Worksout workout={workout} />)
+            worksout?.map(workout => <Worksout key={workout.id} workout={workout} handleTimes={handleTimes} />)
           }
         </div>
 
-        <div className='bg-white'>
-          <Sidecontainer />
+        <div className='bg-white grid col-span-4'>
+          <Sidecontainer times={times} />
         </div>
       </div>
 

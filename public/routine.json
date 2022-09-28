@@ -3,42 +3,42 @@
   "id": "1",
   "name": "Lunges",
   "details":" Start by standing with your feet shoulder-width apart and arms down at your sides.Take a step forward with your right leg and bend your right knee as you do so, stopping when your thigh is parallel to the ground. Ensure that your right knee doesn’t extend past your right foot.Push up off your right foot and return to the starting position. Repeat with your left leg. This is one rep.Complete 3 sets of 10 reps. ",
-  "time": "30s",
+  "time": 30,
   "img":"https://www.mensjournal.com/wp-content/uploads/2018/02/landminelunge.jpg?quality=82&strip=all"
 },
 {
   "id": "2",
   "name": "Pushups",
   "details":" Start in a plank position. Your core should be tight, shoulders pulled down and back, and your neck neutral.Bend your elbows and begin to lower your body down to the floor. When your chest grazes it, extend your elbows and return to the start. Focus on keeping your elbows close to your body during the movement.Complete 3 sets of as many reps as possible.",
-  "time": "35s",
+  "time": 35,
   "img":"https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
 },
 {
   "id": "3",
   "name": "Squats",
   "details":"Start by standing straight, with your feet slightly wider than shoulder-width apart, and your arms at your sides.Brace your core and, keeping your chest and chin up, push your hips back and bend your knees as if you’re going to sit in a chair.Ensuring your knees don’t bow inward or outward, drop down until your thighs are parallel to the ground, bringing your arms out in front of you in a comfortable position. Pause for 1 second, then extend your legs and return to the starting position.Complete 3 sets of 20 reps.",
-  "time": "40s",
+  "time": 40,
   "img":"https://images.unsplash.com/photo-1541600383005-565c949cf777?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
 },
 {
   "id": "4",
   "name": "Dumbbell presses",
   "details":"Pick a light set of dumbbells — we recommend 10 pounds to start — and start by standing, either with your feet shoulder-width apart or staggered.Move the weights overhead so your upper arms are parallel to the floor.Bracing your core, begin to push up until your arms are fully extended above your head. Keep your head and neck stationary.After a brief pause, bend your elbows and lower the weight back down until your triceps muscle is parallel to the floor again.Complete 3 sets of 12 reps.",
-  "time": "45s",
+  "time": 45,
   "img":"https://cdn.muscleandstrength.com/sites/default/files/barbell_vs_dumbbell_shoulder_press_-_1200x630.jpg"
 },
 {
   "id": "5",
   "name": "Burpees",
   "details":"Start by standing upright with your feet shoulder-width apart and your arms down at your sides.With your hands out in front of you, start to squat down. When your hands reach the ground, pop your legs straight back into a pushup position.Jump your feet up to your palms by hinging at the waist. Get your feet as close to your hands as you can get, landing them outside your hands if necessary.Stand up straight, bringing your arms above your head, and jump.This is one rep. Complete 3 sets of 10 reps as a beginner.",
-  "time": "50s",
+  "time": 50,
   "img":"https://fitnessvolt.com/wp-content/uploads/2022/09/Alternative-to-Burpees.jpg"
 },
 {
   "id": "6",
   "name": "Side planks",
   "details":"Lie on your right side with your left leg and foot stacked on top of your right leg and foot. Prop your upper body up by placing your right forearm on the ground and elbow directly under your shoulder.Contract your core to stiffen your spine and lift your hips and knees off the ground, forming a straight line with your body.Return to start in a controlled manner. Repeat 3 sets of 10–15 reps on one side, then switch.",
-  "time": "55s",
+  "time": 55,
   "img":"https://cdn.prod.openfit.com/uploads/2018/05/13111836/Open_Fit_Side_Plank_Hip_Lift_1554-2000x10001-1200x600.jpg"
 }
 ]

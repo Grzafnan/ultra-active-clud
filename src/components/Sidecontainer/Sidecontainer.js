@@ -3,14 +3,18 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
 import './Sidecontainer.css';
 import image from '../../image/my-image.jpg';
-const Sidecontainer = () => {
+const Sidecontainer = ({ times }) => {
+
+  const breakTime = ['10', '20', '30', '40', '50']
+
+
   return (
     <div className='px-6'>
-      <div className='lg:flex lg:items-center gap-4'>
-        <div className='md:flex  md:justify-center'>
+      <div className='lg:flex mt-10 md:mt-0 lg:items-center gap-4'>
+        <div className='flex lg:flex-none  justify-center'>
           <img className='w-20 h-20 rounded-full' src={image} alt="afnan" />
         </div>
-        <div className='md:text-center'>
+        <div className=' text-center lg:text-start'>
           <h2 className='text-xl font-bold italic'>Shakil Ahmmed</h2>
           <span><FontAwesomeIcon className='mr-2 text-gray-500' icon={faLocationDot} />Rajshahi, Bangladesh</span>
         </div>
@@ -43,7 +47,7 @@ const Sidecontainer = () => {
       <h2 className='my-10 text-3xl font-semibold'>Exercise Details</h2>
       <div className='flex justify-between items-center bg-[#F2F4FA]   p-6 rounded-md'>
         <h2 className='text-xl font-semibold'>Exercise time </h2>
-        <p className='text-lg'><span>0</span> seconds</p>
+        <p className='text-lg'><span>{times}</span> seconds</p>
       </div>
       <div className='flex justify-between items-center bg-[#F2F4FA]   p-6 rounded-md mt-5 mb-10'>
         <h2 className='text-xl font-semibold'>Break time </h2>
