@@ -33,9 +33,9 @@ const Home = () => {
   return (
     <div >
       <div className='px-10 py-4 bg-[#F2F4FA]'>
-        <div className='flex items-center'>
-          <img className='w-20' src="https://www.chardomeng.com/wp-content/uploads/2016/11/gym-footer-logo.png" alt="workout-logo" />
-          <h2 className='text-4xl font-semibold ml-4 italic'>Gym Workout Plan</h2>
+        <div className='flex-column md:flex justify-center md:justify-start items-center'>
+          <img className='w-20 mx-auto md:mx-0' src="https://www.chardomeng.com/wp-content/uploads/2016/11/gym-footer-logo.png" alt="workout-logo" />
+          <h2 className='text-4xl text-center font-semibold ml-4 italic'>Gym Workout Plan</h2>
         </div>
         <div className='mt-5'>
           <h3 className='text-2xl font-semibold italic text-center md:text-start'>Select today’s exercise</h3>
