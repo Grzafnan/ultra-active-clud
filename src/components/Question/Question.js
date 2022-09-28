@@ -3,8 +3,8 @@ import './Question.css';
 const Question = () => {
   return (
     <div className=''>
-      <h1 className='text-3xl font-semibold text-center mb-8'>FQA</h1>
-      <div className='w-[80%] mx-auto'>
+      <h1 className='text-3xl font-semibold text-center mb-8 italic'>FQA</h1>
+      <div className='w-[80%] mx-auto mb-20'>
         <div className="collapse">
           <input type="checkbox" className="peer" />
           <div className="collapse-title bg-primary text-primary-content peer-checked:bg-primary peer-checked:text-secondary-content">

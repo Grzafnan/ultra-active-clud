@@ -38,18 +38,18 @@ const Home = () => {
           <h2 className='text-4xl font-semibold ml-4 italic'>Gym Workout Plan</h2>
         </div>
         <div className='mt-5'>
-          <h3 className='text-2xl font-semibold italic'>Select today’s exercise</h3>
+          <h3 className='text-2xl font-semibold italic text-center md:text-start'>Select today’s exercise</h3>
         </div>
       </div>
 
       <div className='workout-container grid md:grid-cols-12 mb-20'>
-        <div className=' col-span-8 bg-[#F2F4FA] grid md:grid-cols-2 lg:grid-cols-3 gap-10 px-10 lg:px-14 py-2'>
+        <div className=' md:col-span-8 bg-[#F2F4FA] grid md:grid-cols-2 lg:grid-cols-3 gap-10 px-10 lg:px-14 py-2'>
           {
             worksout?.map(workout => <Worksout key={workout.id} workout={workout} handleTimes={handleTimes} />)
           }
         </div>
 
-        <div className='bg-white grid col-span-4'>
+        <div className='bg-white grid md:col-span-4'>
           <Sidecontainer times={times} />
         </div>
       </div>
