@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
 import './Sidecontainer.css';
 import image from '../../image/my-image.jpg';
 const Sidecontainer = ({ times }) => {
+
+  const notify = () => toast("Wow Activity Completed!");
 
   const breakTimes = [10, 20, 30, 40, 50]
 
@@ -59,13 +63,6 @@ const Sidecontainer = ({ times }) => {
             <button onClick={() => getBreaktime(breakTime)} className='btn btn-outline btn-primary  w-12 h-10 rounded-full'>{breakTime}S</button>
           ))
         }
-
-
-        {/* <button className='btn btn-outline btn-primary  w-12 h-10 rounded-full'>10S</button>
-        <button className='btn btn-outline btn-primary  w-12 h-10 rounded-full'>20S</button>
-        <button className='btn btn-outline btn-primary  w-12 h-10 rounded-full'>30S</button>
-        <button className='btn btn-outline btn-primary  w-12 h-10 rounded-full'>40S</button>
-        <button className='btn btn-outline btn-primary  w-12 h-10 rounded-full'>50S</button> */}
       </div>
 
       <h2 className='my-10 text-3xl font-semibold'>Exercise Details</h2>
@@ -77,7 +74,8 @@ const Sidecontainer = ({ times }) => {
         <h2 className='text-xl font-semibold'>Break time </h2>
         <p className='text-lg'><span>{breaks}</span> seconds</p>
       </div>
-      <button className='btn btn-primary w-full capitalize text-xl'>Activity Completed</button>
+      <button onClick={notify} className='btn btn-primary w-full capitalize text-xl'>Activity Completed</button>
+      <ToastContainer />
     </div>
   );
 };
