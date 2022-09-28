@@ -14,25 +14,25 @@ const Home = () => {
 
 
   return (
-    <div className='mt-10'>
+    <div >
       <div className='px-10 py-4'>
         <div className='flex items-center'>
           <img className='w-20' src="https://www.chardomeng.com/wp-content/uploads/2016/11/gym-footer-logo.png" alt="workout-logo" />
           <h2 className='text-4xl font-semibold ml-4 italic'>Gym Workout Plan</h2>
         </div>
         <div className='mt-5'>
-          <h3 className='text-2xl font-semibold'>Select today’s exercise</h3>
+          <h3 className='text-2xl font-semibold italic'>Select today’s exercise</h3>
         </div>
       </div>
 
-      <div className='workout-container px-10'>
-        <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-10'>
+      <div className='workout-container mb-10'>
+        <div className=' bg-[#F2F4FA] grid md:grid-cols-2 lg:grid-cols-3 gap-10 px-10 lg:px-14 py-2'>
           {
             worksout.map(workout => <Worksout workout={workout} />)
           }
         </div>
 
-        <div >
+        <div className='bg-white'>
           <Sidecontainer />
         </div>
       </div>
