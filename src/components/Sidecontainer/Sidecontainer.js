@@ -29,7 +29,7 @@ const Sidecontainer = ({ times }) => {
 
 
   return (
-    <div className='px-6'>
+    <div className='px-6 pt-6'>
       <div className='lg:flex mt-10 md:mt-0 lg:items-center gap-4'>
         <div className='flex lg:flex-none  justify-center'>
           <img className='w-20 h-20 rounded-full' src={image} alt="afnan" />

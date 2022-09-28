@@ -3,12 +3,12 @@ import './Question.css';
 const Question = () => {
   return (
     <div className=''>
-      <h1 className='text-3xl font-semibold text-center mb-8 italic'>FQA</h1>
+      <h1 className='text-3xl font-semibold text-center mb-8 italic underline underline-offset-8'>FAQ</h1>
       <div className='w-[80%] mx-auto mb-20'>
         <div className="collapse">
           <input type="checkbox" className="peer" />
           <div className="collapse-title bg-primary text-primary-content peer-checked:bg-primary peer-checked:text-secondary-content">
-            <p className='text-xl font-semibold'>How doex react work?</p>
+            <p className='text-xl font-semibold'>How does react work?</p>
           </div>
           <div className="collapse-content bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
             <p className='py-4 px-2 '>React uses a declarative paradigm that makes it easier to reason about your application and aims to be both efficient and flexible. It designs simple views for each state in your application, and React will efficiently update and render just the right component when your data changes. The declarative view makes your code more predictable and easier to debug.
