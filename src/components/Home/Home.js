@@ -32,7 +32,7 @@ const Home = () => {
 
   return (
     <div >
-      <div className='px-10 py-4'>
+      <div className='px-10 py-4 bg-[#F2F4FA]'>
         <div className='flex items-center'>
           <img className='w-20' src="https://www.chardomeng.com/wp-content/uploads/2016/11/gym-footer-logo.png" alt="workout-logo" />
           <h2 className='text-4xl font-semibold ml-4 italic'>Gym Workout Plan</h2>
@@ -42,7 +42,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className='workout-container grid md:grid-cols-12 mb-10'>
+      <div className='workout-container grid md:grid-cols-12 mb-20'>
         <div className=' col-span-8 bg-[#F2F4FA] grid md:grid-cols-2 lg:grid-cols-3 gap-10 px-10 lg:px-14 py-2'>
           {
             worksout?.map(workout => <Worksout key={workout.id} workout={workout} handleTimes={handleTimes} />)

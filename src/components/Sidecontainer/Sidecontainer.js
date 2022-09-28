@@ -7,7 +7,7 @@ import './Sidecontainer.css';
 import image from '../../image/my-image.jpg';
 const Sidecontainer = ({ times }) => {
 
-  const notify = () => toast("Wow Activity Completed!");
+  const notify = () => toast("Wow Gym Activity Completed!");
 
   const breakTimes = [10, 20, 30, 40, 50]
 
@@ -55,7 +55,7 @@ const Sidecontainer = ({ times }) => {
         </div>
       </div>
 
-      <h2 className='my-10 text-3xl font-semibold'>Add A Break</h2>
+      <h2 className='my-8 text-3xl font-semibold'>Add A Break</h2>
       <div className='bg-[#F2F4FA] flex justify-around gap-1 px-2 py-4 rounded-md'>
 
         {
@@ -65,7 +65,7 @@ const Sidecontainer = ({ times }) => {
         }
       </div>
 
-      <h2 className='my-10 text-3xl font-semibold'>Exercise Details</h2>
+      <h2 className='my-8 text-3xl font-semibold'>Exercise Details</h2>
       <div className='flex justify-between items-center bg-[#F2F4FA]   p-6 rounded-md'>
         <h2 className='text-xl font-semibold'>Exercise time </h2>
         <p className='text-lg'><span>{times}</span> seconds</p>
