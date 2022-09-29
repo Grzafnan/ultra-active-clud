@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Worksout = ({ workout, handleTimes }) => {
-
   const { id, name, details, img, time } = workout;
 
+  const [buttonColor, setButtonColor] = useState(false);
+
+  const [btnText, setBtnText] = useState('Add To List');
+
   const getTimes = (time) => {
-    handleTimes(time)
+    handleTimes(time);
+    setButtonColor(buttonColor => !buttonColor);
+    setBtnText("Added To List");
   }
+
+  let toggleChangeClass = buttonColor ? 'btn-success' : 'btn-primary';
 
   return (
     <div className="card bg-base-100 shadow-xl">
@@ -16,8 +23,7 @@ const Worksout = ({ workout, handleTimes }) => {
         <p>{details ? details.slice(0, 90) + '...' : 'lorem ipsum'}</p>
         <p className='font-semibold'>Time required: {time}s</p>
 
-        <button onClick={() => getTimes(time)} className="btn btn-primary">Add To List</button>
-
+        <button className={`btn ${toggleChangeClass} w-full font-semibold`} onClick={() => getTimes(time)} >{btnText}</button>
       </div>
     </div>
   );
