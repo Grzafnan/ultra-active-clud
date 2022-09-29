@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -9,7 +9,7 @@ const Sidecontainer = ({ times }) => {
 
   const notify = () => toast("Wow Gym Activity Completed!");
 
-  const breakTimes = [10, 20, 30, 40, 50]
+  const breakTimes = [10, 20, 30, 40, 50];
 
   const [breaks, setBreaks] = useState(0)
 
@@ -18,14 +18,13 @@ const Sidecontainer = ({ times }) => {
     localStorage.setItem('Breaks', time);
   }
 
-  useState(() => {
+  useEffect(() => {
     const previousBreaks = localStorage.getItem('Breaks')
 
     if (previousBreaks) {
       setBreaks(previousBreaks)
     }
   }, [])
-
 
 
   return (
