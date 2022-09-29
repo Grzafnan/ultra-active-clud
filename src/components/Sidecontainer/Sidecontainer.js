@@ -70,7 +70,7 @@ const Sidecontainer = ({ times }) => {
 
         {
           breakTimes.map(breakTime => (
-            <button key={breakTime} onClick={() => getBreaktime(breakTime)} className='btn btn-outline btn-primary  w-12 h-10 rounded-full'>{breakTime}S</button>
+            <button key={breakTime} onClick={() => getBreaktime(breakTime)} className='btn btn-outline btn-primary focus:bg-primary focus:text-white  w-12 h-10 rounded-full'>{breakTime}S</button>
           ))
         }
       </div>
