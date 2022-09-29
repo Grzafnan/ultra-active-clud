@@ -6,17 +6,28 @@ import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
 import './Sidecontainer.css';
 import image from '../../image/my-image.jpg';
 const Sidecontainer = ({ times }) => {
+  const [isActive, setIsActive] = useState(false);;
 
-  const notify = () => toast("Wow Gym Activity Completed!");
+  const notify = () => {
+    toast("Wow Gym Activity Completed!");
+    setIsActive(current => !current);
+  };
+
+  let toggleChangeClass = isActive ? 'btn-success' : 'btn-primary';
+
 
   const breakTimes = [10, 20, 30, 40, 50];
 
   const [breaks, setBreaks] = useState(0)
 
+
   const getBreaktime = (time) => {
     setBreaks(time);
     localStorage.setItem('Breaks', time);
   }
+
+
+
 
   useEffect(() => {
     const previousBreaks = localStorage.getItem('Breaks')
@@ -73,7 +84,7 @@ const Sidecontainer = ({ times }) => {
         <h2 className='text-xl font-semibold'>Break time </h2>
         <p className='text-lg'><span>{breaks}</span> seconds</p>
       </div>
-      <button onClick={notify} className='btn btn-primary w-full capitalize text-xl'>Activity Completed</button>
+      <button onClick={notify} className={`btn ${toggleChangeClass} w-full capitalize text-xl`}>Activity Completed</button>
       <ToastContainer />
     </div>
   );
